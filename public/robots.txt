@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Host: https://boredunicorntv.github.io/
+Sitemap: https://boredunicorntv.github.io/sitemap-index.xml

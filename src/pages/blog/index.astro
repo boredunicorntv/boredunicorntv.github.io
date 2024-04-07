@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Default.astro";
+import BlogList from "@components/blog/BlogList.astro";
+
+const posts = await getCollection("blog").then((collection) =>
+  collection.reverse()
+);
+---
+
+<Layout
+  title="Blog"
+  description="Bored Unicorn TV | Covering Unicorns and other mythical creatures."
+  pageTitle="Bored Unicorn TV"
+>
+  <main class="bg-green p-6">
+    <BlogList posts={posts} />
+  </main>
+</Layout>
